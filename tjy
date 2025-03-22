@@ -1,0 +1,13 @@
+<div className="song-list">
+        {songs.map((song) => (
+          <div key={song._id} className="song-card">
+            <img src={song.songAvatarURL} alt={`${song.title} avatar`} className="song-avatar" />
+            <h2>{song.title}</h2>
+            <p>Artist: {song.artist}</p>
+            <audio controls>
+              <source src={song.songURL} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        ))}
+      </div>
